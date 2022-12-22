@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>Cupcakes</title>
+</head>
+<body>
+    
+    <h1>Today's Cupcakes:</h1>
+        <ul id="cupcake-list">
+        </ul>
+    <hr>
+    <br>
+    <h4>Add a Cupcake:</h4>
+    <form id="add-cupcake-form">
+        <label for="flavor-input">Flavor: </label>
+        <input id="flavor-input" name="flavor" type="text" placeholder="Enter a flavor">
+        <br><br>
+        <label for="size-input">Size: </label>
+        <select id="size-input" name="size" placeholder="Select a size">
+            <option value="small">Small</option>
+            <option value="large">Large</option>
+        </select>
+        <br><br>
+        <label for="rating-input">Rating:(10 = "Excellent", 1 = "poor") </label>
+        <select id="rating-input"name="rating" placeholder="Select a rating between 10 - 1">
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>   
+        </select>
+        <br><br>
+        <label for="image-url-input">Image URL: </label>
+        <input id="image-url-input" name="image" type="text" placeholder="Enter an image URL">
+        <br><br>
+        <a href="/api/cupcakes"><button type="submit">Add Cupcake!</button></a>
+    </form>
+    
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="static/cupcakes.js"></script>  
+</body>
+</html>
