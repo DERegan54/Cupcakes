@@ -7,13 +7,15 @@ function generateCupcakeListHTML(cupcake) {
             <img class="cupcake-image" src="${cupcake.image} alt="No image available for ${cupcake.flavor}.">
             <li>
                 <br> 
-                ${cupcake.flavor}
+                Flavor: ${cupcake.flavor}
                 <br>
-                ${cupcake.size}
+                Size: ${cupcake.size}
                 <br>
-                ${cupcake.rating}
+                Rating: ${cupcake.rating}
                 <br>
                 <button class="delete">Delete Cupcake</button>
+                <br>
+                <hr>
             </li>
         </div>
     `;
@@ -22,7 +24,8 @@ function generateCupcakeListHTML(cupcake) {
 
 // Render list of cupcakes on homepage
 async function showCupcakeList() {
-    const resp = await axios.get(`$API_Base_URL}/api/cupcakes`);
+    const resp = await 
+    axios.get(`${API_Base_URL}/api/cupcakes`);
 
     for (let cupcakeData of resp.data.cupcakes) {
         let newCupcake = $(generateCupcakeListHTML(cupcakeData));
